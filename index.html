@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakka Doodhwala - Pure Fresh Milk in Hyderabad</title>
+  <meta name="description" content="Pakka Doodhwala - 100% Pure, fresh milk delivered from our dairy to your doorstep in Hyderabad. Phone & WhatsApp: 9997287773.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ultra-Minimal Premium Floating Header -->
+  <header class="navbar-fixed">
+    <div class="header-container">
+      <!-- Logo & Brand Text -->
+      <a href="#" class="brand-logo">
+        <img src="assets/logo.png" alt="Pakka Doodhwala Logo" class="logo-img">
+        <div class="brand-info">
+          <span class="brand-name">PAKKA DOODHWALA</span>
+          <span class="brand-tagline"><i class="fa-solid fa-droplet"></i> 100% PURE | 0% WATER</span>
+        </div>
+      </a>
+
+      <!-- Minimal Nav Center Links -->
+      <nav class="nav-links">
+        <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#" class="nav-item" onclick="openOrderModal(); return false;"><i class="fa-solid fa-bottle-droplet"></i> Our Milk</a>
+        <a href="#" class="nav-item" onclick="openPurityModal(); return false;"><i class="fa-solid fa-shield-halved"></i> Purity Promise</a>
+        <a href="#" class="nav-item" onclick="openContactModal(); return false;"><i class="fa-solid fa-phone"></i> Contact</a>
+      </nav>
+
+      <!-- Right Actions: City Tag, Phone & Cart -->
+      <div class="header-right">
+        <span class="city-pill"><i class="fa-solid fa-location-dot"></i> Hyderabad</span>
+
+        <a href="tel:9997287773" class="phone-btn">
+          <i class="fa-solid fa-phone"></i>
+          <span>99972 87773</span>
+        </a>
+
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Single Hero Section (Standalone Homepage) -->
+  <main class="hero-section">
+    <!-- Cows Background Image & Soft Gradient Overlay -->
+    <div class="hero-bg" style="background-image: url('assets/cows_bg.jpg');"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating Ambient Elements -->
+    <div class="floating-drop drop-1">🥛</div>
+    <div class="floating-drop drop-2">💧</div>
+
+    <div class="hero-container">
+      <!-- Left Animated Content -->
+      <div class="hero-left">
+        <div class="delivery-badge animate-fade">
+          <i class="fa-solid fa-cow"></i> Direct Farm Freshness to Hyderabad
+        </div>
+
+        <!-- Smooth Animated Heading -->
+        <h1 class="hero-title animate-title">
+          <span class="title-line line-1">Fresh Milk.</span>
+          <span class="title-line line-2 highlight-text">Honest Quality.</span>
+          <span class="title-line line-3">Every Day.</span>
+        </h1>
+
+        <!-- Smooth Animated Subtitle -->
+        <p class="hero-subtitle animate-sub">
+          Pure, fresh milk delivered from our dairy to your doorstep.
+        </p>
+
+        <!-- Feature Pills -->
+        <div class="features-row animate-feats">
+          <div class="feat-card">
+            <i class="fa-solid fa-droplet-slash"></i>
+            <span>0% Water Added</span>
+          </div>
+          <div class="feat-card">
+            <i class="fa-solid fa-wine-bottle"></i>
+            <span>Eco Glass Bottles</span>
+          </div>
+          <div class="feat-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Morning Delivery</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-row animate-btns">
+          <button class="btn btn-primary" onclick="openOrderModal()">
+            <i class="fa-solid fa-bottle-droplet"></i> Order Fresh Milk
+          </button>
+          <a href="https://wa.me/919997287773?text=Hi%20Pakka%20Doodhwala,%20I%20want%20to%20order%20pure%20milk%20in%20Hyderabad." target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Card Showcase -->
+      <div class="hero-right animate-card">
+        <div class="glass-card">
+          <div class="card-badge">Bestseller</div>
+          <div class="card-img-wrap">
+            <img src="assets/milk_bottle.jpg" alt="A2 Desi Cow Milk Bottle">
+          </div>
+          <div class="card-body">
+            <h3>A2 Desi Cow Milk</h3>
+            <p>100% Pure & Organic Gir Cow Milk in Glass Bottle</p>
+            <div class="card-price-row">
+              <span class="price-text">₹75 <small>/ Litre</small></span>
+              <button class="order-mini-btn" onclick="openOrderModal()">
+                <i class="fa-solid fa-plus"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Order Modal Popup -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeOrderModal()">&times;</button>
+      
+      <div class="modal-header">
+        <img src="assets/logo.png" alt="Pakka Doodhwala" class="modal-logo">
+        <h2>Order Fresh Milk</h2>
+        <p>Direct WhatsApp Order (9997287773)</p>
+      </div>
+
+      <form id="orderForm" onsubmit="handleFormSubmit(event)">
+        <div class="field-group">
+          <label>Your Name</label>
+          <input type="text" id="custName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="field-group">
+          <label>Select Product</label>
+          <select id="custProduct" required>
+            <option value="A2 Desi Cow Milk (₹75/L)">A2 Desi Cow Milk (₹75/L)</option>
+            <option value="Farm Fresh Buffalo Milk (₹85/L)">Farm Fresh Buffalo Milk (₹85/L)</option>
+            <option value="Bilona A2 Desi Ghee (₹950/500ml)">Bilona A2 Desi Ghee (₹950/500ml)</option>
+            <option value="Fresh Malai Paneer (₹120/250g)">Fresh Malai Paneer (₹120/250g)</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label>Quantity</label>
+            <select id="custQty" required>
+              <option value="1 Litre / Pack">1 Litre</option>
+              <option value="2 Litres / Packs">2 Litres</option>
+              <option value="3 Litres / Packs">3 Litres</option>
+              <option value="5 Litres / Packs">5 Litres</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Schedule</label>
+            <select id="custTime">
+              <option value="Daily Morning 6:00 AM">Daily Morning</option>
+              <option value="One-Time Trial">One-Time Trial</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label>Hyderabad Address / Locality</label>
+          <input type="text" id="custAddress" placeholder="Area Name in Hyderabad" required>
+        </div>
+
+        <button type="submit" class="btn-submit-wa">
+          <i class="fa-brands fa-whatsapp"></i> Send Order via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Purity Guarantee Modal -->
+  <div class="modal-overlay" id="purityModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closePurityModal()">&times;</button>
+      <div class="modal-header">
+        <img src="assets/logo.png" alt="Pakka Doodhwala" class="modal-logo">
+        <h2>Pakka Purity Guarantee</h2>
+        <p>100% Pure | 0% Water Adulteration</p>
+      </div>
+      <div style="color: #D1D5DB; font-size: 0.95rem; line-height: 1.6;">
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 12px;"><i class="fa-solid fa-check text-green" style="color:#22C55E; margin-right:8px;"></i> <strong>Zero Added Water:</strong> Tested daily with lactometers.</li>
+          <li style="margin-bottom: 12px;"><i class="fa-solid fa-check text-green" style="color:#22C55E; margin-right:8px;"></i> <strong>Sterilized Glass Bottles:</strong> Reusable, eco-friendly & chemical-free.</li>
+          <li style="margin-bottom: 12px;"><i class="fa-solid fa-check text-green" style="color:#22C55E; margin-right:8px;"></i> <strong>Hyderabad Morning Delivery:</strong> At your doorstep before 7:00 AM.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeContactModal()">&times;</button>
+      <div class="modal-header">
+        <img src="assets/logo.png" alt="Pakka Doodhwala" class="modal-logo">
+        <h2>Pakka Doodhwala Hyderabad</h2>
+        <p>Direct WhatsApp & Phone Helpline</p>
+      </div>
+      <div style="color: #D1D5DB; font-size: 0.95rem; line-height: 1.8;">
+        <p><i class="fa-brands fa-whatsapp" style="color:#25D366; margin-right:8px;"></i> <strong>WhatsApp Order:</strong> <a href="https://wa.me/919997287773" target="_blank" style="color:#FFF; font-weight:800; text-decoration:underline;">99972 87773</a></p>
+        <p><i class="fa-solid fa-phone" style="color:var(--yellow); margin-right:8px;"></i> <strong>Direct Call:</strong> <a href="tel:9997287773" style="color:#FFF; font-weight:800;">+91 99972 87773</a></p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--yellow); margin-right:8px;"></i> <strong>Service Area:</strong> Hyderabad & Secunderabad</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Side Drawer -->
+  <div class="cart-overlay" id="cartDrawer">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3><i class="fa-solid fa-basket-shopping"></i> Shopping Basket</h3>
+        <button class="cart-close-btn" onclick="closeCart()">&times;</button>
+      </div>
+
+      <div class="cart-body">
+        <div class="empty-cart-view">
+          <i class="fa-solid fa-bottle-droplet"></i>
+          <p>Your basket is currently empty.</p>
+          <button class="btn btn-primary" style="margin-top: 15px;" onclick="closeCart(); openOrderModal();">Order Fresh Milk</button>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total-line">
+          <span>Total Payable:</span>
+          <strong>₹0</strong>
+        </div>
+        <button class="btn-submit-wa" onclick="closeCart(); openOrderModal();">
+          <i class="fa-brands fa-whatsapp"></i> Proceed to WhatsApp Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-box" id="toast">Order redirecting to WhatsApp...</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

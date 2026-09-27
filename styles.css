@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PAKKA DOODHWALA - VIBRANT HERO BACKGROUND & ULTRA-MINIMAL HEADER
+   PAKKA DOODHWALA - CLEAN VIBRANT HERO & ULTRA-MINIMAL HEADER
    ========================================================================== */
 
 :root {
@@ -220,14 +220,14 @@ body {
   overflow: hidden;
 }
 
-/* VIBRANT COWS BACKGROUND */
+/* COWS BACKGROUND */
 .hero-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center bottom;
   z-index: 1;
-  filter: brightness(1.05) contrast(1.05);
+  filter: brightness(0.95);
   animation: zoomBg 20s infinite alternate ease-in-out;
 }
 
@@ -236,12 +236,12 @@ body {
   100% { transform: scale(1.04); }
 }
 
-/* SOFT LEGIBLE OVERLAY (SHOWS COWS CLEARLY & BRIGHTLY) */
+/* LEGIBLE SOFT OVERLAY */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.45) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.55) 100%);
 }
 
 .floating-drop {
@@ -275,21 +275,17 @@ body {
   align-items: center;
 }
 
+/* Clean Unboxed Text Layout */
 .hero-left {
   max-width: 660px;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-  padding: 24px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .delivery-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(245, 184, 0, 0.25);
-  border: 1px solid rgba(245, 184, 0, 0.6);
+  background: rgba(245, 184, 0, 0.2);
+  border: 1px solid rgba(245, 184, 0, 0.5);
   color: #FFF;
   padding: 6px 16px;
   border-radius: var(--radius-full);
@@ -312,7 +308,7 @@ body {
   letter-spacing: -1.5px;
   margin-bottom: 22px;
   color: #FFF;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
 }
 
 .title-line {
@@ -340,7 +336,7 @@ body {
   max-width: 580px;
   opacity: 0;
   animation: fadeIn 0.8s ease 0.6s forwards;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   font-weight: 500;
 }
 
@@ -357,14 +353,14 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 8px 16px;
   border-radius: var(--radius-md);
   font-size: 0.88rem;
   font-weight: 700;
   color: #FFF;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .feat-card i {

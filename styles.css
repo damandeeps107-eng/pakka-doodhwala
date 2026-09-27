@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PAKKA DOODHWALA - ULTRA-MINIMAL HEADER & SMOOTH ANIMATED HOMEPAGE
+   PAKKA DOODHWALA - VIBRANT HERO BACKGROUND & ULTRA-MINIMAL HEADER
    ========================================================================== */
 
 :root {
@@ -7,9 +7,9 @@
   --yellow-glow: #FFD000;
   --whatsapp-green: #25D366;
   --dark-bg: #121214;
-  --dark-surface: rgba(18, 18, 22, 0.85);
+  --dark-surface: rgba(18, 18, 22, 0.88);
   --text-white: #FFFFFF;
-  --text-muted: #9CA3AF;
+  --text-muted: #E2E8F0;
   --radius-full: 9999px;
   --radius-lg: 20px;
   --radius-md: 12px;
@@ -50,12 +50,12 @@ body {
   background: var(--dark-surface);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .brand-logo {
@@ -68,7 +68,7 @@ body {
 .logo-img {
   height: 44px;
   width: auto;
-  filter: drop-shadow(0 2px 8px rgba(245, 184, 0, 0.3));
+  filter: drop-shadow(0 2px 8px rgba(245, 184, 0, 0.4));
 }
 
 .brand-info {
@@ -99,7 +99,7 @@ body {
 }
 
 .nav-item {
-  color: #E5E7EB;
+  color: #F3F4F6;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.88rem;
@@ -137,21 +137,22 @@ body {
   font-size: 0.78rem;
   font-weight: 700;
   color: #4ADE80;
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.4);
   padding: 6px 14px;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   gap: 6px;
+  backdrop-filter: blur(8px);
 }
 
 .phone-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(245, 184, 0, 0.15);
-  border: 1px solid rgba(245, 184, 0, 0.4);
+  background: rgba(245, 184, 0, 0.2);
+  border: 1px solid rgba(245, 184, 0, 0.5);
   color: var(--yellow);
   padding: 7px 16px;
   border-radius: var(--radius-full);
@@ -159,6 +160,7 @@ body {
   font-weight: 800;
   text-decoration: none;
   transition: var(--transition);
+  backdrop-filter: blur(8px);
 }
 
 .phone-btn:hover {
@@ -206,7 +208,7 @@ body {
 }
 
 /* -------------------------------------------------------------------------- */
-/* SINGLE HERO HOMEPAGE SECTION                                              */
+/* VIBRANT HERO HOMEPAGE SECTION                                              */
 /* -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
@@ -218,13 +220,14 @@ body {
   overflow: hidden;
 }
 
+/* VIBRANT COWS BACKGROUND */
 .hero-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center bottom;
   z-index: 1;
-  filter: brightness(0.85);
+  filter: brightness(1.05) contrast(1.05);
   animation: zoomBg 20s infinite alternate ease-in-out;
 }
 
@@ -233,20 +236,22 @@ body {
   100% { transform: scale(1.04); }
 }
 
+/* SOFT LEGIBLE OVERLAY (SHOWS COWS CLEARLY & BRIGHTLY) */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(10, 10, 12, 0.92) 0%, rgba(18, 18, 22, 0.8) 50%, rgba(10, 10, 12, 0.88) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.45) 100%);
 }
 
 .floating-drop {
   position: absolute;
   z-index: 3;
-  font-size: 2.2rem;
-  opacity: 0.5;
+  font-size: 2.5rem;
+  opacity: 0.8;
   pointer-events: none;
   animation: floatDrop 6s infinite ease-in-out alternate;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
 }
 
 .drop-1 { top: 22%; right: 10%; animation-delay: 0.5s; }
@@ -272,23 +277,33 @@ body {
 
 .hero-left {
   max-width: 660px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .delivery-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(245, 184, 0, 0.15);
-  border: 1px solid rgba(245, 184, 0, 0.4);
-  color: var(--yellow);
+  background: rgba(245, 184, 0, 0.25);
+  border: 1px solid rgba(245, 184, 0, 0.6);
+  color: #FFF;
   padding: 6px 16px;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* SMOOTH TEXT ANIMATIONS */
+.delivery-badge i {
+  color: var(--yellow);
+}
+
+/* SMOOTH TEXT ANIMATIONS & TEXT SHADOW */
 .hero-title {
   font-family: 'Outfit', sans-serif;
   font-size: 4.2rem;
@@ -297,6 +312,7 @@ body {
   letter-spacing: -1.5px;
   margin-bottom: 22px;
   color: #FFF;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
 }
 
 .title-line {
@@ -313,17 +329,19 @@ body {
   background: linear-gradient(135deg, #F5B800 0%, #FFE600 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 15px rgba(245, 184, 0, 0.35));
+  filter: drop-shadow(0 4px 15px rgba(245, 184, 0, 0.5));
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  color: #E5E7EB;
+  font-size: 1.35rem;
+  color: #F8FAFC;
   line-height: 1.5;
   margin-bottom: 32px;
   max-width: 580px;
   opacity: 0;
   animation: fadeIn 0.8s ease 0.6s forwards;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
 }
 
 .features-row {
@@ -339,13 +357,13 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 8px 16px;
   border-radius: var(--radius-md);
   font-size: 0.88rem;
-  font-weight: 600;
-  color: #F3F4F6;
+  font-weight: 700;
+  color: #FFF;
   backdrop-filter: blur(10px);
 }
 
@@ -380,25 +398,25 @@ body {
 .btn-primary {
   background: var(--yellow);
   color: #121214;
-  box-shadow: 0 6px 24px rgba(245, 184, 0, 0.45);
+  box-shadow: 0 6px 24px rgba(245, 184, 0, 0.5);
 }
 
 .btn-primary:hover {
   background: var(--yellow-glow);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(245, 184, 0, 0.65);
+  box-shadow: 0 10px 30px rgba(245, 184, 0, 0.7);
 }
 
 .btn-whatsapp {
   background: var(--whatsapp-green);
   color: #FFF;
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
 }
 
 .btn-whatsapp:hover {
   background: #20BD5A;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.65);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
 }
 
 /* Keyframe Animations */
@@ -419,16 +437,16 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(18, 18, 22, 0.75);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-lg);
   padding: 22px;
   max-width: 350px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
   animation: floatCard 6s infinite ease-in-out alternate;
 }
 
@@ -539,7 +557,7 @@ body {
 
 .modal-card {
   background: #18181B;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-lg);
   padding: 28px;
   width: 100%;

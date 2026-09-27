@@ -299,7 +299,7 @@ body {
   color: var(--yellow);
 }
 
-/* SMOOTH TEXT ANIMATIONS & TEXT SHADOW */
+/* SMOOTH TEXT ANIMATIONS & ORIGINAL YELLOW COLOR */
 .hero-title {
   font-family: 'Outfit', sans-serif;
   font-size: 4.2rem;
@@ -322,10 +322,10 @@ body {
 .line-3 { animation: smoothSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; }
 
 .highlight-text {
-  background: linear-gradient(135deg, #F5B800 0%, #FFE600 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 15px rgba(245, 184, 0, 0.5));
+  color: var(--yellow);
+  -webkit-text-fill-color: var(--yellow);
+  background: none;
+  text-shadow: 0 2px 14px rgba(245, 184, 0, 0.5);
 }
 
 .hero-subtitle {

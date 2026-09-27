@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PAKKA DOODHWALA - CLEAN VIBRANT HERO & ULTRA-MINIMAL HEADER
+   PAKKA DOODHWALA - CLEAN VIBRANT HERO & MOBILE-RESPONSIVE HEADER
    ========================================================================== */
 
 :root {
@@ -7,7 +7,7 @@
   --yellow-glow: #FFD000;
   --whatsapp-green: #25D366;
   --dark-bg: #121214;
-  --dark-surface: rgba(18, 18, 22, 0.88);
+  --dark-surface: rgba(18, 18, 22, 0.92);
   --text-white: #FFFFFF;
   --text-muted: #E2E8F0;
   --radius-full: 9999px;
@@ -63,6 +63,7 @@ body {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo-img {
@@ -109,6 +110,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .nav-item i {
@@ -131,6 +133,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .city-pill {
@@ -145,6 +148,7 @@ body {
   align-items: center;
   gap: 6px;
   backdrop-filter: blur(8px);
+  white-space: nowrap;
 }
 
 .phone-btn {
@@ -161,6 +165,7 @@ body {
   text-decoration: none;
   transition: var(--transition);
   backdrop-filter: blur(8px);
+  white-space: nowrap;
 }
 
 .phone-btn:hover {
@@ -184,6 +189,7 @@ body {
   cursor: pointer;
   transition: var(--transition);
   box-shadow: 0 4px 14px rgba(245, 184, 0, 0.4);
+  flex-shrink: 0;
 }
 
 .cart-btn:hover {
@@ -215,8 +221,8 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 40px;
+  padding-top: 110px;
+  padding-bottom: 50px;
   overflow: hidden;
 }
 
@@ -241,7 +247,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.55) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.55) 100%);
 }
 
 .floating-drop {
@@ -756,15 +762,71 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Media Queries */
-@media (max-width: 992px) {
+/* -------------------------------------------------------------------------- */
+/* PERFECT MOBILE RESPONSIVE STYLES                                           */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 6px;
+  }
+  .nav-item {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 860px) {
   .nav-links {
     display: none;
+  }
+
+  .city-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-fixed {
+    top: 10px;
+  }
+
+  .header-container {
+    padding: 8px 14px;
+    border-radius: 24px;
+  }
+
+  .logo-img {
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.6rem;
+  }
+
+  .phone-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .cart-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding-top: 130px;
+    padding-bottom: 40px;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 30px;
   }
 
   .hero-left {
@@ -776,20 +838,58 @@ body {
   }
 
   .hero-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (max-width: 576px) {
-  .hero-title {
-    font-size: 2.5rem;
+@media (max-width: 480px) {
+  .navbar-fixed {
+    top: 6px;
+  }
+
+  .header-container {
+    padding: 6px 12px;
   }
 
   .phone-btn span {
     display: none;
   }
 
-  .header-container {
-    padding: 8px 14px;
+  .phone-btn {
+    padding: 8px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  .hero-section {
+    padding-top: 120px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  .feat-card {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 }
